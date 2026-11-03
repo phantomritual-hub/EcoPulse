@@ -5,7 +5,7 @@ app = Flask(__name__)
 def show():
     return render_template("EcoPulse.html")
 
-@app.route("birthday_Test")
+@app.route("/birthday_Test")
 def run():
     return render_template("Index.html")
 
