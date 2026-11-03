@@ -5,5 +5,9 @@ app = Flask(__name__)
 def show():
     return render_template("EcoPulse.html")
 
+@app.route("birthday_Test")
+def run():
+render_template("Index.html")
+
 if __name__ == "__main__":
     app.run(debug=True,host="0.0.0.0", port=10000)
