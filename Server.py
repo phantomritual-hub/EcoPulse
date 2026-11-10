@@ -18,8 +18,7 @@ def start():
 def returnCall():
     webURL = request.json
     time.sleep(14*60+50)
-     requests.post("https://school-project-name.onrender.com/Wakeup_Call",data = "https://ecopulse-73io.onrender.com")
-    return "wake up call sent"
+     requests.post(webURL,data = "https://ecopulse-73io.onrender.com/Wakeup_Call")
 
 
 if __name__ == "__main__":
