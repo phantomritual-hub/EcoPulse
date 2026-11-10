@@ -10,7 +10,7 @@ def show():
 def run():
     return render_template("Index.html")
 
-@app.route("/start loop")
+@app.route("/start_loop")
 def start():
     requests.post("https://school-project-name.onrender.com/Wakeup_Call",data = "https://ecopulse-73io.onrender.com/Wakeup_Call")
 
