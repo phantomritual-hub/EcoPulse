@@ -1,5 +1,6 @@
 from flask import Flask,render_template
 import os
+import requests
 app = Flask(__name__)
 @app.route("/")
 def show():
@@ -9,12 +10,15 @@ def show():
 def run():
     return render_template("Index.html")
 
+@app.route("/start loop")
+def start():
+    requests.post("https://school-project-name.onrender.com/Wakeup_Call",data = "https://ecopulse-73io.onrender.com/Wakeup_Call")
 
 @app.route("/Wakeup_Call",methods=['POST'])
 def returnCall():
     webURL = request.json
     time.sleep(14*60+50)
-    requests.post("https://school-project-name.onrender.com/Wakeup_Call",data = "https://ecopulse-73io.onrender.com")
+     requests.post("https://school-project-name.onrender.com/Wakeup_Call",data = "https://ecopulse-73io.onrender.com")
     return "wake up call sent"
 
 
