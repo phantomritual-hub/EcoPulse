@@ -13,7 +13,7 @@ def run():
 @app.route("/start_loop")
 def start():
     requests.post("https://school-project-name.onrender.com/Wakeup_Call",data = "https://ecopulse-73io.onrender.com/Wakeup_Call")
-    return
+    return 'done ig'
 
 @app.route("/Wakeup_Call",methods=['POST'])
 def returnCall(end=False):
